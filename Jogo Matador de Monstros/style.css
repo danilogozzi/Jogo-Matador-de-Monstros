@@ -1,0 +1,45 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.cx-1, .cx-2, .cx-3, .start-game{
+     box-shadow: 0px 1px 10px;
+     padding:1%;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     width:70%;
+     margin:0 auto; 
+ }
+ .cx-2 button{
+     margin: 0 1%;
+     padding:1%;
+     border: none;
+     border-radius: 15px;
+     cursor: pointer;
+ }
+ .cx-2 button:active{
+     border: 0.1px solid black;
+ }
+ .cx-2 button:nth-child(1){
+     background-color: rgb(216, 52, 52);
+ }
+ .cx-2 button:nth-child(2){
+     background-color: rgb(216, 172, 52);
+ }
+ .cx-2 button:nth-child(3){
+     background-color: rgb(63, 170, 69);
+ }
+ .cx-2 button:nth-child(4){
+     background-color: rgb(133, 133, 133);
+ }
+ .jogador, .monstro{
+    text-align: center;
+    margin:0 1%;
+ }
+.vida-1, .vida-2{
+    background-color: rgb(10, 255, 10);
+    height:3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

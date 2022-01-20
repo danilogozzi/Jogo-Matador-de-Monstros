@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-be">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matador de Monstros</title>
+
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="desafio">
+    <div class="cx-jogo" v-if="!quit">
+        <div class="cx-1">
+            <div class="jogador">
+                <h2>Jogador</h2>
+                <span>{{vidaJogador}}</span>
+                <div :style="ataqueProgressoJogador" class="vida-1">HP</div>
+            </div>
+            VS
+            <div class="monstro">
+                <h2>Monstro</h2>
+                <span>{{vidaMonstro}}</span>
+                <div :style="ataqueProgressoMonstro" class="vida-2">HP</div>
+            </div>
+        </div>
+        <br>
+        <div class="cx-2">
+            <button @click="ataqueJogador" :class="barraVidas()">Ataque</button>
+            <button @click="especial">Ataque Especial</button>
+            <button @click="cura">Curar</button>
+            <button @click="quit = ! quit">Desistir</button>
+        </div>
+        <br>
+    </div>
+    <div v-else class="start-game">
+        <button @click="quit = ! quit">COMEÇAR JOGO</button>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
